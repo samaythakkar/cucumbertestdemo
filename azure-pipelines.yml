@@ -19,6 +19,10 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: NodeTool@0
+  displayName: 'Install Node 12.x'
+  inputs:
+    versionSpec: 12.x
 - task: PublishCucumberReport@1
   inputs:
     jsonDir: '$(System.DefaultWorkingDirectory)/results/cucumber'
