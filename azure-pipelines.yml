@@ -26,11 +26,12 @@ steps:
 - task: PublishCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
-    jsonDir: ./results/cucumber.json
-    outputPath: ./results/cucumber.json
+    jsonDir: $(Sytem.DefaultWorkingDirectory)/results
+    outputPath: $(Sytem.DefaultWorkingDirectory)/results/cucumber.json
     metadata: |
      {
        "ApplicationUrl": "$(App.Url)"
      }
     name: 'Functional Tests'
     title: API
+
