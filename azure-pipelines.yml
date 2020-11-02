@@ -26,8 +26,8 @@ steps:
 - task: PublishCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
-    jsonDir: $(Sytem.DefaultWorkingDirectory)/results
-    outputPath: $(Sytem.DefaultWorkingDirectory)/results/cucumber.json
+    jsonDir: ./results
+    outputPath: ./results/
     metadata: |
      {
        "ApplicationUrl": "$(App.Url)"
