@@ -27,7 +27,7 @@ steps:
   displayName: 'Publish Cucumber Report'
   inputs:
     jsonDir: ./results
-    outputPath: ./results/
+    outputPath: ./results
     metadata: |
      {
        "ApplicationUrl": "$(App.Url)"
