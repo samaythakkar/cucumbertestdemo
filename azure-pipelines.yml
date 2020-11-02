@@ -19,3 +19,9 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: PublishCucumberReport@1
+  inputs:
+    jsonDir: '$(System.DefaultWorkingDirectory)'
+    outputPath: '$(Sytem.DefaultWorkingDirectory)'
+    theme: 'bootstrap'
+    reportSuiteAsScenarios: true
