@@ -24,8 +24,13 @@ steps:
   inputs:
     versionSpec: 12.x
 - task: PublishCucumberReport@1
+  displayName: 'Publish Cucumber Report'
   inputs:
-    jsonDir: '$(System.DefaultWorkingDirectory)/results/cucumber'
-    outputPath: '$(Sytem.DefaultWorkingDirectory)/results/cucumber'
-    theme: 'bootstrap'
-    reportSuiteAsScenarios: true
+    jsonDir: ./results/cucumber
+    outputPath: ./results/cucumber
+    metadata: |
+     {
+       "ApplicationUrl": "$(App.Url)"
+     }
+    name: 'Functional Tests'
+    title: API
