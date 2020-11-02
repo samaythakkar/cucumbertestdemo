@@ -21,7 +21,7 @@ steps:
     sonarQubeRunAnalysis: false
 - task: PublishCucumberReport@1
   inputs:
-    jsonDir: '$(System.DefaultWorkingDirectory)'
-    outputPath: '$(Sytem.DefaultWorkingDirectory)'
+    jsonDir: '$(System.DefaultWorkingDirectory)/results/cucumber'
+    outputPath: '$(Sytem.DefaultWorkingDirectory)/results/cucumber'
     theme: 'bootstrap'
     reportSuiteAsScenarios: true
