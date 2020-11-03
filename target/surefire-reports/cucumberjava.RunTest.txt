@@ -1,4 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: cucumberjava.RunTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.037 sec
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.522 sec <<< FAILURE!
+Login functionality exists(CucumberJava)  Time elapsed: 7.551 sec  <<< FAILURE!
+java.lang.AssertionError
+	at cucumberjava.CucumberJava.performSearch(CucumberJava.java:34)
+	at ✽.User should be able to perform search(classpath:cucumberjava/CucumberJava.feature:7)
+

@@ -10,23 +10,28 @@ import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class CucumberJava {
-	WebDriver driver = null;
+
+	private Hooks hooks;
+
+	public CucumberJava(Hooks hooks) {
+		this.hooks = hooks;
+	}
 
 	@Given("^User opens the browser$")
 	public void openBrowser() {
-		WebDriverManager.chromedriver().version("86.0.4240.22").setup();
-		driver = new ChromeDriver();
-		}
+
+	}
 
 	@When("^User is on google homepage$")
-	public void goToFacebook() {
-		driver.get("http://www.google.co.in");	
+	public void goToGoogle() {
+		hooks.getDriver().get("http://www.google.co.in");
 
 	}
 
 	@Then("^User should be able to perform search$")
-	public void loginButton() {
-		driver.findElement(By.name("q")).sendKeys("HELLO WORLD");
-		assert true;
+	public void performSearch() {
+		hooks.getDriver().findElement(By.name("q")).sendKeys("HELLO WORLD");
+		assert false;
 	}
+
 }
