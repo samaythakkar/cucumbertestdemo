@@ -28,8 +28,8 @@ steps:
   displayName: 'Publish Cucumber Report'
   condition: always()
   inputs:
-    jsonDir: ./results/cucumber.json
-    outputPath: ./results/cucumber.json
+    jsonDir: ./results
+    outputPath: ./results
     metadata: |
      {
        "ApplicationUrl": "$(App.Url)"
