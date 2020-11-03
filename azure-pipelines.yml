@@ -21,10 +21,12 @@ steps:
     sonarQubeRunAnalysis: false
 - task: NodeTool@0
   displayName: 'Install Node 12.x'
+  continueOnError: true
   inputs:
     versionSpec: 12.x
 - task: PublishCucumberReport@1
   displayName: 'Publish Cucumber Report'
+  continueOnError: true
   inputs:
     jsonDir: ./results/cucumber.json
     outputPath: ./results/cucumber.json
