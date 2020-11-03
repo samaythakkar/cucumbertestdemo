@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="cucumberjava.RunTest" time="7.551" errors="0" skipped="0">
+<testsuite tests="0" failures="0" name="cucumberjava.RunTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="cucumber.options" value="--tags &apos;@sanity1"/>
     <property name="java.vm.version" value="14.0.1+14"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/Users/macbookair/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/cucumberjavatest"/>
@@ -41,7 +42,7 @@
     <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dcucumber.options=--tags &apos;@sanity1"/>
     <property name="java.home" value="/usr/local/Cellar/openjdk/14.0.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -57,23 +58,4 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="CucumberJava" name="Login functionality exists" time="7.551">
-    <failure type="java.lang.AssertionError">java.lang.AssertionError
-	at cucumberjava.CucumberJava.performSearch(CucumberJava.java:34)
-	at ✽.User should be able to perform search(classpath:cucumberjava/CucumberJava.feature:7)
-</failure>
-    <system-out>This will run before the Scenario
-This will run after the Scenario
-</system-out>
-    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 4652
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-Nov 04, 2020 1:35:04 AM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-</system-err>
-  </testcase>
 </testsuite>

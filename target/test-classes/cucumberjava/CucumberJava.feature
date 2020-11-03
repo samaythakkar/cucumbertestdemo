@@ -1,5 +1,6 @@
 Feature: CucumberJava
 
+@sanity
 Scenario: Login functionality exists
 
 Given User opens the browser
