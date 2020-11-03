@@ -12,11 +12,11 @@
         "steps": [
           {
             "result": {
-              "duration": 7284363951,
+              "duration": 5211791069,
               "status": "passed"
             },
             "line": 5,
-            "name": "I have open the browser",
+            "name": "User opens the browser",
             "match": {
               "location": "CucumberJava.openBrowser()"
             },
@@ -24,11 +24,11 @@
           },
           {
             "result": {
-              "duration": 200971353,
+              "duration": 1853674845,
               "status": "passed"
             },
-            "line": 7,
-            "name": "I open Facebook website",
+            "line": 6,
+            "name": "User is on google homepage",
             "match": {
               "location": "CucumberJava.goToFacebook()"
             },
@@ -36,11 +36,11 @@
           },
           {
             "result": {
-              "duration": 47311,
+              "duration": 284175786,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Login button should exits",
+            "line": 7,
+            "name": "User should be able to perform search",
             "match": {
               "location": "CucumberJava.loginButton()"
             },

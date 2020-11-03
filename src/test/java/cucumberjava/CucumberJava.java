@@ -12,20 +12,21 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class CucumberJava {
 	WebDriver driver = null;
 
-	@Given("^I have open the browser$")
+	@Given("^User opens the browser$")
 	public void openBrowser() {
 		WebDriverManager.chromedriver().version("86.0.4240.22").setup();
 		driver = new ChromeDriver();
-		driver.get("http://www.google.co.in");	
 		}
 
-	@When("^I open Facebook website$")
+	@When("^User is on google homepage$")
 	public void goToFacebook() {
-		driver.findElement(By.name("q")).sendKeys("HELLO WORLD");
+		driver.get("http://www.google.co.in");	
+
 	}
 
-	@Then("^Login button should exits$")
+	@Then("^User should be able to perform search$")
 	public void loginButton() {
+		driver.findElement(By.name("q")).sendKeys("HELLO WORLD");
 		assert true;
 	}
 }

@@ -2,10 +2,8 @@ Feature: CucumberJava
 
 Scenario: Login functionality exists
 
-Given I have open the browser
-
-When I open Facebook website
-
-Then Login button should exits
+Given User opens the browser
+When User is on google homepage
+Then User should be able to perform search
 
 
